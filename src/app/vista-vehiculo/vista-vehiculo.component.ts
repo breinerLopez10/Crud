@@ -20,6 +20,15 @@ export class VistaVehiculoComponent {
   buscarVehiculo(): void {
     this.getVehiculoService.getVehiculo(this.idVehiculo).subscribe(
       (data) => {
+        if (!data) {
+          Swal.fire(
+            '¡Advertencia!',
+            'El vehículo no existe',
+            'warning'
+          );
+          return;
+        }
+  
         this.vehiculo = data;
         Swal.fire(
           '¡Éxito!',
@@ -36,4 +45,5 @@ export class VistaVehiculoComponent {
       }
     )
   }
+  
 }

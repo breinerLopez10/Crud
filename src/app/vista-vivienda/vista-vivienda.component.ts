@@ -20,6 +20,15 @@ export class VistaViviendaComponent {
   buscarVivienda(): void {
     this.getViviendaService.getVivienda(this.idVivienda).subscribe(
       (data) => {
+        if (!data) {
+          Swal.fire(
+            '¡Advertencia!',
+            'La vivienda no existe',
+            'warning'
+          );
+          return;
+        }
+  
         this.vivienda = data;
         Swal.fire(
           '¡Éxito!',
@@ -36,4 +45,5 @@ export class VistaViviendaComponent {
       }
     )
   }
+  
 }

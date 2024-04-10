@@ -23,6 +23,15 @@ export class VistaEventoComponent {
     this.personas = [];
     this.getEventoService.getEvento(this.idEvento).subscribe(      
       (data: any) => {
+        if (!data) {
+          Swal.fire(
+            '¡Advertencia!',
+            'El evento no existe',
+            'warning'
+          );
+          return;
+        }
+  
         this.evento = data;
         for (let persona of data.personas) {
           console.log(persona);
@@ -62,4 +71,4 @@ export class VistaEventoComponent {
       }
     )
   }
-}
+}  

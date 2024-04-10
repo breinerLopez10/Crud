@@ -18,11 +18,19 @@ export class VistaPersonaComponent {
   eventos: string[] = [];
 
   constructor(private getPersonaService: GetPersonaService, private getEventoService: GetEventoService) { }
-
   buscarPersona(): void {
     this.eventos = [];
     this.getPersonaService.getPersona(this.documento).subscribe(
       (data) => {
+        if (!data) {
+          Swal.fire(
+            '¡Información!',
+            'Persona no encontrada',
+            'warning'
+          );
+          return;
+        }
+  
         this.persona = data;
         for (let evento of data.eventos) {
           console.log(evento);
@@ -61,5 +69,4 @@ export class VistaPersonaComponent {
         );
       }
     );
-  }
-}
+  }}
