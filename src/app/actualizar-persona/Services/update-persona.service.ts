@@ -9,7 +9,7 @@ export class UpdatePersonaService {
   constructor(private http: HttpClient) { }
 
   putPersona(data: any): any {
-    const url = `http://localhost:8180/api/personas/${data.idDocumento}/${data.vivienda}/${data.cabezaFamilia}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/personas/${data.idDocumento}/${data.vivienda}/${data.cabezaFamilia}`;
     return this.http.put(url, data);
   }
 }

@@ -10,7 +10,7 @@ export class RegistrarEventoService {
   constructor(private http: HttpClient) { }
 
   postEvento(data: any): Observable<any> {
-    const url = `http://localhost:8180/api/crearevento/${data.lugar}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/crearevento/${data.lugar}`;
     return this.http.post(url, data);
   }
 }

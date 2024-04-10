@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GetAllVehiculosService {
-  private apiUrl = 'http://localhost:8180/api/vehiculos'; 
+  private apiUrl = 'https://crud-angular-springboot-production.up.railway.app/api/vehiculos'; 
 
   constructor(private http: HttpClient) { }
 

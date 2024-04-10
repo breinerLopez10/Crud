@@ -9,7 +9,7 @@ export class DeletePersonaService {
   constructor(private http: HttpClient) { }
 
   deletePersona(idDocumento: string): any {
-    const url = `http://localhost:8180/api/eliminarpersona/${idDocumento}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/eliminarpersona/${idDocumento}`;
     return this.http.delete(url);
   }
 }

@@ -10,7 +10,7 @@ export class AddPersonaEventoService {
   constructor(private http: HttpClient) { }
 
   addPersonaEvento(idDocumento: string, idEvento: string, data: any): Observable<any> {
-    const url = `http://localhost:8180/api/personas/eventos/${idDocumento}/${idEvento}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/personas/eventos/${idDocumento}/${idEvento}`;
     return this.http.put(url, data);
   }
 }

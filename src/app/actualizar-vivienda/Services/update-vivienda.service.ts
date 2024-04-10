@@ -9,7 +9,7 @@ export class UpdateViviendaService {
   constructor(private http: HttpClient) { }
 
   putVivienda(data: any): any {
-    const url = `http://localhost:8180/api/viviendas/${data.idVivienda}/${data.idMunicipio}/${data.idPropietario}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/viviendas/${data.idVivienda}/${data.idMunicipio}/${data.idPropietario}`;
     return this.http.put(url, data);
   }
 }

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GetEventoService {
-  private url = 'http://localhost:8180/api/eventos';
+  private url = 'https://crud-angular-springboot-production.up.railway.app/api/eventos';
 
   constructor(private http: HttpClient) { }
 

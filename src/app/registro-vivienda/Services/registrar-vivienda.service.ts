@@ -10,7 +10,7 @@ export class RegistrarViviendaService {
   constructor(private http: HttpClient) { }
 
   postVivienda(data: any): Observable<any> {
-    const url = `http://localhost:8180/api/crearvivienda/${data.municipio}/${data.propietario}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/crearvivienda/${data.municipio}/${data.propietario}`;
     return this.http.post(url, data);
   }
 }

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GetAllEventosService {
-  private apiUrl = 'http://localhost:8180/api/eventos'; 
+  private apiUrl = 'https://crud-angular-springboot-production.up.railway.app/api/eventos'; 
 
   constructor(private http: HttpClient) { }
 

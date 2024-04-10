@@ -8,13 +8,13 @@ export class UpdateAlcaldeService {
   constructor(private http: HttpClient) { }
 
   putMunicipio(alcalde: string, data: any): any {
-    const url = `http://localhost:8180/api/municipios/${data.idMunicipio}/${alcalde}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/municipios/${data.idMunicipio}/${alcalde}`;
     return this.http.put(url, data);
   }
 
 
   getMunicipio(idMunicipio: string): any {
-    const url = `http://localhost:8180/api/municipios/${idMunicipio}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/municipios/${idMunicipio}`;
     return this.http.get(url);
   }
 

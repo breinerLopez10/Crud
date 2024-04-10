@@ -9,7 +9,7 @@ export class UpdateEventoService {
   constructor(private http: HttpClient) { }
 
   putEvento(data: any): any {
-    const url = `http://localhost:8180/api/eventos/${data.idEvento}/${data.lugar}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/eventos/${data.idEvento}/${data.lugar}`;
     return this.http.put(url, data);
   }
 }

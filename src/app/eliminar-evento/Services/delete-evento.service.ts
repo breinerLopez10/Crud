@@ -9,7 +9,7 @@ export class DeleteEventoService {
   constructor(private http: HttpClient) { }
 
   deleteEvento(idEvento: string): any {
-    const url = `http://localhost:8180/api/eliminarevento/${idEvento}`;
+    const url = `https://crud-angular-springboot-production.up.railway.app/api/eliminarevento/${idEvento}`;
     return this.http.delete(url);
   }
 }

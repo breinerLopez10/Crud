@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GetViviendaService {
-  private url: string  = 'http://localhost:8180/api/viviendas';
+  private url: string  = 'https://crud-angular-springboot-production.up.railway.app/api/viviendas';
 
   constructor(private http: HttpClient) { }
 
